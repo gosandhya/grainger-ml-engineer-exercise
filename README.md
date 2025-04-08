@@ -5,7 +5,7 @@ This repository contains a solution for Grainger ML Engineer take-home interview
 
 # Evaluation for Query-Product Matching
 
-This project explores how different embedding models and data sampling strategies affect retrieval performance in a query-to-product matching task. We benchmark models using common metrics like Hits@K and MRR to understand generalization and overfitting tendencies.
+This project explores how different embedding models and data sampling strategies affect retrieval performance in a query-to-product matching task. I benchmarked models using common metrics like Hits@K and MRR to understand generalization and overfitting tendencies.
 
 ---
 
@@ -16,6 +16,9 @@ This project explores how different embedding models and data sampling strategie
   - Default random sampling
   - Clustered query selection
   - Stratified sampling for balanced evaluation
+  - **Default Random Sampling**: Randomly selects 50 queries and 500 random products against those.
+  - **Clustered Query Selection**: Queries are grouped into 10 clusters. 5 queries are selected from each cluster making it 50 queries. and then 500 products are randomly selected against those.
+  - **Clustered Query Selection + Stratified Sampling**:Queries are grouped into 10 clusters. 5 queries are selected from each cluster making it 50 queries then stratified sampling is used to ensure a balanced representation of each cluster for the final 500 product samples.
 
 - `main.py`  
   Builds a FAISS index on the product embeddings and evaluates retrieval using:
@@ -26,7 +29,7 @@ This project explores how different embedding models and data sampling strategie
 
 ## Embedding Model Comparison
 
-We benchmarked multiple models using different data creation strategies. Below is a visual summary:
+I benchmarked multiple models using different data creation strategies. Below is a visual summary:
 
 ![Evaluation Table](src/main/data/output/evaluation.png)
 
