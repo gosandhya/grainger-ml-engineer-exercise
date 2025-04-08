@@ -2,10 +2,7 @@
 
 This repository contains a solution for Grainger ML Engineer take-home interview assignment.
 
-
-# Evaluation for Query-Product Matching
-
-This project explores how different embedding models and data sampling strategies affect retrieval performance in a query-to-product matching task. I benchmarked models using common metrics like Hits@K and MRR to understand generalization and overfitting tendencies.
+This code explores how different embedding models and data sampling strategies affect retrieval performance in a query-to-product matching task. I benchmarked models using common metrics like Hits@K and MRR to understand generalization and overfitting tendencies.
 
 ---
 
