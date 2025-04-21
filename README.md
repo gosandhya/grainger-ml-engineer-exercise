@@ -10,9 +10,6 @@ This code explores how different embedding models and data sampling strategies a
 
 - `data.py`  
   Generates the evaluation dataset by sampling query-product pairs. Includes:
-  - Default random sampling
-  - Clustered query selection
-  - Stratified sampling for balanced evaluation
   - **Default Random Sampling**: Randomly selects 50 queries and 500 random products against those.
   - **Clustered Query Selection**: Queries are grouped into 10 clusters. 5 queries are selected from each cluster making it 50 queries. and then 500 products are randomly selected against those.
   - **Clustered Query Selection + Stratified Sampling**:Queries are grouped into 10 clusters. 5 queries are selected from each cluster making it 50 queries then stratified sampling is used to ensure a balanced representation of each cluster for the final 500 product samples.
